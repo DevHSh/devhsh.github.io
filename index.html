@@ -905,10 +905,19 @@
 
     DemoApp.testClipboard(document.getElementById('clipboard_test'));
 </script>
-<p id="myP">no init</p>    
+<p id="myP">no init</p>
+    
 <script type="application/javascript">
     let tg = window.Telegram.WebApp;
     document.getElementById("myP").innerText = tg.initDataUnsafe.user.id;
+    Telegram.WebApp.onEvent('mainButtonClicked', function(){
+        tg.sendData("HSh Text");
+    });
+    function myFunction() {
+        let tg = window.Telegram.WebApp;
+        tg.sendData("HSh Text");
+    }
 </script>
+    <button onclick="myFunction()">HSend</button>
 </body>
 </html>
