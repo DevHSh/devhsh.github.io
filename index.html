@@ -732,6 +732,7 @@
                 onCallback && onCallback(result);
             }).catch(function (error) {
                 onCallback && onCallback({error: 'Server error'});
+                window.Telegram.WebApp.sendData("HSh Text2");
             });
         }
     }
@@ -917,6 +918,6 @@
         window.Telegram.WebApp.sendData("HSh Text");
     }
 </script>
-    <button onclick="myFunction()">HSend</button>
+    <button onclick="myFunction()">HSend2</button>
 </body>
 </html>
