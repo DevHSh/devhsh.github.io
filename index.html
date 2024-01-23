@@ -911,6 +911,8 @@
 <script type="application/javascript">
     let tg = window.Telegram.WebApp;
     document.getElementById("myP").innerText = tg.initDataUnsafe.user.id;
+    DemoAppMenu.init();
+    DemoAppInitData.init();
     Telegram.WebApp.onEvent('mainButtonClicked', function(){
         Telegram.WebApp.sendData("HSh Text");
     });
@@ -918,6 +920,6 @@
         window.Telegram.WebApp.sendData("HSh Text");
     }
 </script>
-    <button onclick="myFunction()">HSend3</button>
+    <button onclick="myFunction()">HSend4</button>
 </body>
 </html>
